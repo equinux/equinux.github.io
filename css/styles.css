@@ -6,7 +6,7 @@ html {
 
 @media (min-width: 576px) {
 	html {
-		font-size: 14px;
+		font-size: 16px;
 	}
 }
 
@@ -25,16 +25,19 @@ html {
 
 img {
 	
-max-width: 280px;
+max-width: 240px;
 height: auto;
-}
-.download p {
-	
+display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .appdownload img {
 	max-width: 200px;
 	height: auto;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .icons-social i {
@@ -47,14 +50,14 @@ main {
 	min-height: 100vh;
 	
 	text-align: center;
-	padding: 2% 20% 5% 20%;
+	padding: 2% 10% 5% 10%;
 	background: #fff;
 	color: #020202;
 }
 
 main > .intro {
 	padding: 1.5rem 0 0 0 ;
-	font-size: 1.75em;
+	font-size: 1.3em;
 	font-weight: 600;
 }
 
