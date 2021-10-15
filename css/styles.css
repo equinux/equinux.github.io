@@ -84,7 +84,9 @@ line-height: 1.6rem;
 
 }
 .howto ol {
-	
+	list-style: decimal;
+list-style-position: inside;
+line-height: 2rem;
 }
  .tagline {
 	font-size: 1.5rem;
