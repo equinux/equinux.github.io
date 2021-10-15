@@ -22,7 +22,11 @@ html {
 	}
 }
 
-
+.logo img   {
+	width: 40px; 
+	height:auto;
+	display: block;
+}
 
 .icons-social i {
 	font-size: 3em;
@@ -34,10 +38,9 @@ main {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	justify-content: center;
-	padding: 0 30px;
+	
 	text-align: center;
-	padding: 0 20% 0 20%;
+	padding: 20% 20% 5% 20%;
 }
 
 main > .intro {
