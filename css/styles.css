@@ -22,30 +22,12 @@ html {
 	}
 }
 
-.logo   {
-	width: 30%;
-	max-width: 200px; 
-	height:auto;
+
+img {
 	
+max-width: 180px;
+height: auto;
 }
-
-.download img {
-	height:auto;
-	clear: both;
-}
-
-
-.download img {
-	height:auto;
-	clear: both;
-}
-
-.get img {
-	height:50%;
-	width: auto;
-	clear: both;
-}
-
 .download p {
 	
 }
@@ -95,15 +77,4 @@ h3 {
 a {
 	text-decoration: none;
 	color: #1F4CAC;
-}
-
-.devto {
-	margin-bottom: -0.20rem;
-}
-
-.devto svg {
-	margin-bottom: -0.20rem;
-	margin-left: 0.675rem;;
-	width: 2.65rem;
-	height: 2.65rem;
 }
