@@ -14,12 +14,16 @@ html {
 	html {
 		font-size: 16px;
 	}
+	
+
 }
 
 @media (min-width: 992px) {
 	html {
 		font-size: 18px;
 	}
+	
+
 }
 
 
@@ -50,7 +54,7 @@ main {
 	min-height: 100vh;
 	
 	text-align: center;
-	padding: 2% 10% 5% 10%;
+	padding: 2% 20% 8% 20%;
 	background: #fff;
 	color: #020202;
 }
