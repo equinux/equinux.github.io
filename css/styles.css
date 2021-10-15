@@ -22,10 +22,32 @@ html {
 	}
 }
 
-.logo img   {
-	width: 40px; 
+.logo   {
+	width: 30%;
+	max-width: 200px; 
 	height:auto;
-	display: block;
+	
+}
+
+.download img {
+	height:auto;
+	clear: both;
+}
+
+
+.download img {
+	height:auto;
+	clear: both;
+}
+
+.get img {
+	height:50%;
+	width: auto;
+	clear: both;
+}
+
+.download p {
+	
 }
 
 .icons-social i {
@@ -35,32 +57,27 @@ html {
 /* Custom Styles */
 
 main {
-	display: flex;
-	flex-direction: column;
 	min-height: 100vh;
 	
 	text-align: center;
-	padding: 20% 20% 5% 20%;
+	padding: 10% 20% 5% 20%;
+	background: #fff;
+	color: #020202;
 }
 
 main > .intro {
+	padding: 1.5rem 0 0 0 ;
 	font-size: 1.75em;
 	font-weight: 600;
 }
 
-.explainer p {
-	font-size: 1rem;
-	line-height: 1.5rem;
+p {
+	font-size: 1.2rem;
+	line-height: 1.8rem;
 	margin: 1.5rem 0;
-	font-weight: 300;
+	font-weight: 500;
 }
 
- .download {
-	font-size: 1.5rem;
-	line-height: 2rem;
-	margin: 1.5rem 0;
-	font-weight: 300;
-}
 
  .tagline {
 	font-size: 1.5rem;
@@ -73,6 +90,11 @@ h3 {
 }
 .icons-social i {
 	padding: 40px;
+}
+
+a {
+	text-decoration: none;
+	color: #1F4CAC;
 }
 
 .devto {
