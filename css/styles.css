@@ -25,11 +25,16 @@ html {
 
 img {
 	
-max-width: 180px;
+max-width: 280px;
 height: auto;
 }
 .download p {
 	
+}
+
+.appdownload img {
+	max-width: 200px;
+	height: auto;
 }
 
 .icons-social i {
