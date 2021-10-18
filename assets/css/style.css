@@ -801,10 +801,10 @@ p {
 
 
 .header-hero-content {
-  padding-top: 80px; }
+  padding-top: 40px; }
   @media (max-width: 767px) {
     .header-hero-content {
-      padding-top: 50px; } }
+      padding-top: 30px; } }
   .header-hero-content .header-sub-title {
     font-size: 38px;
     font-weight: 300;
