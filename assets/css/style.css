@@ -142,6 +142,31 @@ p {
   line-height: 48px;
   border-radius: 8px;
   border: 0;
+  color: color(srgb 0.249 0.249 0.249);
+  cursor: pointer;
+  z-index: 5;
+  background: #fff;
+  background-size: 200%; }
+  .main-btn:hover {
+    color: #003378;
+    background-position: right center; }
+    
+.try-btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 15px;
+  padding: 0 25px;
+  font-size: 16px;
+  line-height: 48px;
+  border-radius: 8px;
+  border: 0;
   color: #fff;
   cursor: pointer;
   z-index: 5;
@@ -150,19 +175,27 @@ p {
   -ms-transition: all 0.4s ease-out 0s;
   -o-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
-  background: -webkit-linear-gradient(left, #33c8c1 0%, #119bd2 50%, #33c8c1 100%);
-  background: -o-linear-gradient(left, #33c8c1 0%, #119bd2 50%, #33c8c1 100%);
-  background: linear-gradient(to right, #33c8c1 0%, #119bd2 50%, #33c8c1 100%);
+  background: #003378;
   background-size: 200%; }
-  .main-btn:hover {
+  .try-btn:hover {
     color: #fff;
     background-position: right center; }
+    
+    
+.vpntbtn {
+  background: #DCAA6B;
+}
+
+.mailbtn {
+  background: #404DB4;
+
+}
 
 /*===== All SECTION TITLE Style =====*/
 .section-title .line {
-  background: -webkit-linear-gradient(#fe8464 0%, #fe6e9a 100%);
-  background: -o-linear-gradient(#fe8464 0%, #fe6e9a 100%);
-  background: linear-gradient(#fe8464 0%, #fe6e9a 100%);
+  background: -webkit-linear-gradient(#2c2c2c 0%, #b8b8b8 100%);
+  background: -o-linear-gradient(#2c2c2c 0%, #b8b8b8 100%);
+  background: linear-gradient(#2c2c2c 0%, #b8b8b8 100%);
   width: 150px;
   height: 5px;
   margin-bottom: 10px !important; }
@@ -765,19 +798,13 @@ p {
   z-index: 5;
   background-position: bottom center; }
 
-#particles-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; }
+
 
 .header-hero-content {
-  padding-top: 180px; }
+  padding-top: 80px; }
   @media (max-width: 767px) {
     .header-hero-content {
-      padding-top: 100px; } }
+      padding-top: 50px; } }
   .header-hero-content .header-sub-title {
     font-size: 38px;
     font-weight: 300;
@@ -818,6 +845,16 @@ p {
 /*===========================
       03.BRAND css 
 ===========================*/
+
+.eq-logo {
+  max-width: 120px;
+  flex-wrap: wrap;
+  height: auto;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media (max-width: 767px) {
   .brand-logo {
     -ms-flex-wrap: wrap;
@@ -861,7 +898,7 @@ p {
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  padding: 50px 30px;
+  padding: 30px 30px;
   border: 2px solid transparent;
   border-radius: 8px; }
   @media (max-width: 767px) {
@@ -933,13 +970,30 @@ p {
     .single-services .services-content .more:hover {
       color: #361CC1; }
   .single-services:hover {
-    border-color: #FE7A7B; }
+    border-color: #003378; }
     .single-services:hover .services-icon .shape {
       -webkit-transform: rotate(25deg);
       -moz-transform: rotate(25deg);
       -ms-transform: rotate(25deg);
       -o-transform: rotate(25deg);
       transform: rotate(25deg); }
+
+.vpnt:hover {
+  border-color: #DCAA6B;
+}
+
+.maild:hover {
+  border-color: #404DB4;
+}
+
+.getbutton {
+max-width: 180px;
+flex-wrap: wrap;
+height: auto;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /*===========================
       05.ABOUT css 
@@ -978,7 +1032,7 @@ p {
   max-width: 480px; }
   .about-content .text {
     margin-top: 15px; }
-  .about-content .main-btn {
+  /* .about-content .main-btn {
     background: -webkit-linear-gradient(left, #fe8464 0%, #fe6e9a 50%, #fe8464 100%);
     background: -o-linear-gradient(left, #fe8464 0%, #fe6e9a 50%, #fe8464 100%);
     background: linear-gradient(to right, #fe8464 0%, #fe6e9a 50%, #fe8464 100%);
@@ -986,9 +1040,18 @@ p {
     height: 50px;
     line-height: 50px;
     padding: 0 35px;
-    margin-top: 40px; }
+    margin-top: 40px; } */
     .about-content .main-btn:hover {
       background-position: right center; }
+  
+  
+  .aboutlink:hover {
+    text-decoration: underline;
+  }    
+.aboutlink:hover {
+  color:white;
+  text-decoration: underline;
+}
 
 /*===========================
     06.VIDEO COUNTER css 
@@ -1398,7 +1461,7 @@ p {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../images/footer-bg.svg);
+  background-color: #003378;
   background-position: top center;
   z-index: -1;
   background-size: cover; }
@@ -1406,16 +1469,10 @@ p {
     .footer-area::before {
       height: 1120px; } }
 
-#particles-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; }
+
 
 .footer-widget {
-  padding-top: 50px; }
+  padding-top: 10px; }
 
 .footer-about .logo img {
   width: 160px; }
@@ -1439,12 +1496,16 @@ p {
       -o-transition: all 0.3s ease-out 0s;
       transition: all 0.3s ease-out 0s; }
       .footer-about .social li a:hover {
-        color: #FE8464; }
+        text-decoration: underline; }
 
 .footer-title .title {
   font-size: 24px;
   font-weight: 700;
   color: #fff; }
+
+.link {
+  text-decoration: underline;
+}
 
 .link-wrapper {
   padding: 0 35px; }
@@ -1465,7 +1526,7 @@ p {
         -o-transition: all 0.3s ease-out 0s;
         transition: all 0.3s ease-out 0s; }
         .link-wrapper .link li a:hover {
-          color: #FE8464; }
+          text-decoration: underline; }
 
 .footer-contact .contact {
   padding-top: 20px; }
@@ -1493,7 +1554,8 @@ p {
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s; }
     .copyright-content a:hover {
-      color: #FE8464; }
+      text-decoration: underline;
+    }
 
 /*===== BACK TO TOP =====*/
 .back-to-top {
