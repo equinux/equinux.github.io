@@ -1045,13 +1045,21 @@ display: block;
       background-position: right center; }
   
   
-  .aboutlink:hover {
-    text-decoration: underline;
-  }    
+
 .aboutlink:hover {
   color:white;
   text-decoration: underline;
 }
+.devlink {
+  color: #003378;
+  
+}
+
+.devlink:hover {
+
+  text-decoration: underline;
+}
+
 
 /*===========================
     06.VIDEO COUNTER css 
@@ -1465,9 +1473,9 @@ display: block;
   background-position: top center;
   z-index: -1;
   background-size: cover; }
-  @media only screen and (min-width: 1921px) {
+  /* @media only screen and (min-width: 1921px) {
     .footer-area::before {
-      height: 1120px; } }
+      height: 1120px; } } */
 
 
 
