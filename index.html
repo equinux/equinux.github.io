@@ -21,19 +21,21 @@
     
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
+    <link rel="stylesheet" href="assets/css/signupform_style.css">
+ 
+    <script type="text/javascript" src="assets/js/signupform.js"></script>
 </head>
 
 <body>
     <!--[if IE]>
- 
-   
-    
+
 
     <!--====== PRELOADER PART ENDS ======-->
     
     <!--====== HEADER PART START ======-->
-    
+    <div id="includedContent"></div>
+
     <header class="header-area">
         
         
@@ -98,10 +100,62 @@
                     </div> <!-- single services -->
                 </div>
                 </div>
+                
             </div> <!-- row -->
             <div class="row justify-content-center pt-30">
 <p><a class="devlink" href="https://www.equinux.com/jobs">Developer? We're hiring →</a></p></div>
 
+<div class="container pt-50">
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-md-7 col-sm-8">
+<div id="md365-signup">
+    <form class="md365-form" onsubmit="submitForm(event)">
+      <div id="md365-form">
+        <span class="md365-h3"><h3>Subscribe to receive latest news</h3></span>
+          <div class="md365-input-wrapper">
+          <input class="md365-input" type="text" name="firstname" id="md365-firstName"
+            placeholder="First name" autocomplete="given-name">
+        </div>
+        <div class="md365-input-wrapper">
+          <input class="md365-input" type="text" name="lastname" id="md365-lastName"
+            placeholder="Last name" autocomplete="family-name">
+        </div>
+        <div class="md365-input-wrapper">
+          <input class="md365-input" type="email" name="email" id="md365-email"
+            placeholder="Email *" autocomplete="email" required>
+            </div>
+                <span class="md365-h4">Subscribe to</span>
+              <div id="rectangle" class="col">
+    <input type="checkbox" name= attributes value= WinterCollection id="md365-Winter-WinterCollection-STRING" class="pr-1"/>
+    <label for="WinterCollection" > WinterCollection</label>
+  </div>
+            </div>
+            <input class="md365-end" autocomplete="off" type="text" id="nameAlt" name="nameAlt" placeholder="Your name here">
+            <input class="md365-end" autocomplete="off" type="text" id="emailAlt" name="emailAlt" placeholder="Your email here">
+            <br />
+        <div class="md365-input-wrapper">
+          <input class="md365-button" type="submit" value="subscribe" name="subscribe" id="md365-subscribe">
+        </div>
+        <div>
+          <input class="md365-redirectURL" style="display: none;" type="text" name="url" value="
+          " id="md365-redirectURL">
+          <input class="md365-confirmationSuccessURL" style="display: none;" type="text" name="confirmation_success_url" value="" id="md365-confirmationSuccessURL">
+          <input class="md365-confirmationFailureURL" style="display: none;" type="text" name="confirmation_failure_url" value="" id="md365-confirmationFailureURL" autocomplete="off">
+          <input class="md365-signupFormId" style="display: none;" type="text" name="signupFormId" value="186d4b51-7cb6-40e1-b198-5e313ba5ed92" id="md365-signupFormId" autocomplete="off">
+        </div>
+      </div>
+      
+  <span class="md365-h3 hidden" id="success-message">
+    <h3> Sign up was successful. Please confirm your email address. </h3>
+  </span>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+    
+       <!--====== SIGNUP FORM PART ENDS ======-->
+      
         </div> <!-- container -->
     </section>
     
@@ -126,15 +180,13 @@
                         <br><br><br>
                         <p>Disclaimer: We offer this configuration profile solution as a convenience. Please note that we don't offer support for this issue - thanks!</p>
                     </div> <!-- about content -->
+                    
                 </div>
                 
     </section>
     
     <!--====== ABOUT PART ENDS ======-->
-    
-  
-    
-    
+
     
     <!--====== FOOTER PART START ======-->
     
@@ -186,5 +238,7 @@
 
 
 </body>
+
+
 
 </html>
