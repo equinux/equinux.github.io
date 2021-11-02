@@ -21,6 +21,13 @@
     
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includeContent").load("signupform.html"); 
+    });
+    </script> 
     
 </head>
 
@@ -132,9 +139,11 @@
     
     <!--====== ABOUT PART ENDS ======-->
     
-  
+  <!--====== SIGNUP FORM PART START ======-->
+  <div id="includeContent"></div>
     
-    
+       <!--====== SIGNUP FORM PART ENDS ======-->
+      
     
     <!--====== FOOTER PART START ======-->
     
@@ -186,5 +195,7 @@
 
 
 </body>
+
+
 
 </html>
