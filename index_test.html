@@ -109,7 +109,6 @@
     
     <!--====== SIGNUP FORM PART STARTS ======-->
 
- 
   <!-- CSS -->
   <style type="text/css">
     #md365-signup {
@@ -125,8 +124,9 @@
       text-align: center
     }
     
-    .md365-h3 h3 {
+    .md365-h3 {
       font-weight: bold;
+      justify-content:center!important;
       padding: 0;
       margin: 15px 0;
       font-size: 1.3em;
@@ -208,7 +208,7 @@
 
     .wd-50 {
       justify-content:center!important;
-      padding: 25%;
+      padding: 10%;
   }
   
   </style>
@@ -218,7 +218,7 @@
   <div id="md365-signup" class="wd-50">
     <form class="md365-form" onsubmit="submitForm(event)">
       <div id="md365-form">
-        <span class="md365-h3"><h3>Summer Collection</h3></span>
+         <h3 class="md365-h3">Summer Collection</h3>
           <div class="md365-input-wrapper">
           <input class="md365-input" type="text" name="firstname" id="md365-firstName"
             placeholder="First name" autocomplete="given-name">
@@ -259,9 +259,8 @@
         </div>
       </div>
       
-  <span class="md365-h3 hidden" id="success-message">
-    <h3> Sign up was successful. Please confirm your email address. </h3>
-  </span>
+<div>
+    <h3 class="md365-h3 hidden"  id="success-message"> Sign up was successful. Please confirm your email address. </h3></div>
     </form>
   </div>
   <!-- JavaScript -->
@@ -310,19 +309,19 @@ ddocument.getElementById('md365-subscribe-form').addEventListener(
         document.getElementById("success-message").classList.remove('hidden')
         } else {
         var el = document.getElementById("failure-message");
-        el.innerHTML = `  <span class="md365-h3" id="success-message"><h3>${formatMessage(messages.successfulSubmit)}</h3></span>`
+        el.innerHTML = ` <div><h3 class="md365-h3"  id="success-message"> ${formatMessage(messages.successfulSubmit)} </h3></div>`
         }
       } else if(request.status == 400 || request.status == 500 || request.status == 409)  {
         if (document.getElementById('success-message') != null) {
         var el = document.getElementById('success-message');
         var newEl = document.createElement('p');
         var response = JSON.parse(request.responseText);
-        newEl.innerHTML =  ` <span class="md365-h3" id="failure-message"><h3>${response.error}</h3></span>`;
+        newEl.innerHTML =  `  <div><h3 class="md365-h3"  id="failure-message">${response.error} </h3></div>`;
         el.parentNode.replaceChild(newEl, el);
         } else {
           var response = JSON.parse(request.responseText);
           var el = document.getElementById('failure-message');
-          el.innerHTML =  ` <span class="md365-h3" id="failure-message"><h3>${response.error}</h3></span>`;
+          el.innerHTML =  `  <div><h3 class="md365-h3"  id="failure-message">${response.error} </h3></div>`;
         }
       } else {
         var response = JSON.parse(request.responseText);
