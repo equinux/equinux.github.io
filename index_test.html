@@ -108,8 +108,7 @@
     
     
     <!--====== SIGNUP FORM PART STARTS ======-->
-    
- 
+
   <!-- CSS -->
   <style type="text/css">
     #md365-signup {
@@ -300,7 +299,7 @@ ddocument.getElementById('md365-subscribe-form').addEventListener(
    
     request.open(
       'POST',
-      'https://my.maildesigner365.com/public/api/signup/16e1aa65-2df3-4c8a-822d-3ee6fa26c140'
+      'http://localhost:5000/public/api/signup/16e1aa65-2df3-4c8a-822d-3ee6fa26c140'
     );
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify(data));
@@ -413,13 +412,6 @@ ddocument.getElementById('md365-subscribe-form').addEventListener(
     </footer>
     
     <!--====== FOOTER PART ENDS ======-->
-  
-    
-   
-
 
 </body>
-
-
-
 </html>
