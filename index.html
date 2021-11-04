@@ -25,6 +25,79 @@
     <link rel="stylesheet" href="assets/css/signupform_style.css">
  
     <script type="text/javascript" src="assets/js/signupform.js"></script>
+    
+    
+      <!-- CSS -->
+      <style type="text/css">
+        #md365-signup {
+          background: #ffffff00;
+          font: 14px Arial, Helvetica, sans-serif;
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+      
+        .md365-form form {
+          display: block;
+          position: relative;
+          text-align: center
+        }
+        
+       
+        
+        .md365-input-wrapper {
+          text-align: center;
+          display: flex;
+        }
+      
+        .md365-input-wrapper input {
+          vertical-align: bottom;
+          margin: 5px;
+          padding: 0 10px;
+          outline: none;
+          font-size: 14px !important;
+          font-weight: normal;
+          border-radius: 4px;
+          flex-grow: 1;
+        }
+      
+        .md365-input-wrapper input[type="submit"] {
+          border: 1px solid;
+          transition: all 0.20s ease-in-out 0s;
+          color: #757578;
+          background-color: #FFFFFF;
+          cursor: pointer;
+          height: 39px;
+          min-width: 100px;
+          max-width: 30%;
+          text-align: center;
+          margin: auto;
+          margin-top: 5px;
+        }
+      
+        .md365-input-wrapper input[type="text"],
+        [type="email"] {
+          height: 39px;
+          background-color: #eee;
+          border: 1px solid;
+          border-color: #ffffff00;
+          transition: all 0.20s ease-in-out 0s;
+        }
+        
+        .md365-end{
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 0;
+          width: 0;
+          z-index: -1;
+      }
+    
+        .hidden {
+          display: none;
+        }
+      
+      </style>
 </head>
 
 <body>
@@ -137,6 +210,54 @@
                 
     </section>
     
+    <section id="newsletter-subscribe" class="about-area pt-20 pb-50">
+        <div class="container">
+      <!-- Signup form -->
+      <div id="md365-signup">
+        <form class="md365-form" action="https://mailhq-develop.maildesigner365.com/public/api/signup/b8dd12fd-fd71-4b73-b130-7bca0c52670d" method="post" id="md365-subscribe-form" name="subscribe-form" target="_blank">
+          <div id="md365-form">
+            <span class="md365-h3"><h3>Get occasional hints, tips & tricks for macOS</h3></span>
+              <div class="md365-input-wrapper">
+              <input class="md365-input" type="text" name="firstname" id="md365-firstName"
+                placeholder="First name" autocomplete="given-name">
+            </div>
+            <div class="md365-input-wrapper">
+              <input class="md365-input" type="text" name="lastname" id="md365-lastName"
+                placeholder="Last name" autocomplete="family-name">
+            </div>
+            <div class="md365-input-wrapper">
+              <input class="md365-input" type="email" name="email" id="md365-email"
+                placeholder="Email *" autocomplete="email" required>
+                </div>
+          
+                </div>
+                <input class="md365-end" autocomplete="off" type="text" id="nameAlt" name="nameAlt" placeholder="Your name here">
+                <input class="md365-end" autocomplete="off" type="text" id="emailAlt" name="emailAlt" placeholder="Your email here">
+                <br />
+                <div class="row">
+            
+            </div>
+            <div class="md365-input-wrapper">
+              <input class="md365-button" type="submit" value="Sign up" name="subscribe"
+            id="md365-subscribe">
+            </div>
+            <div>
+              <input class="md365-redirectURL" style="display: none;" type="text" name="url" value="
+              " id="md365-redirectURL">
+              <input class="md365-confirmationSuccessURL" style="display: none;" type="text" name="confirmation_success_url" value="" id="md365-confirmationSuccessURL">
+              <input class="md365-confirmationFailureURL" style="display: none;" type="text" name="confirmation_failure_url" value="" id="md365-confirmationFailureURL" autocomplete="off">
+              <input class="md365-signupFormId" style="display: none;" type="text" name="signupFormId" value="a309d874-7691-4db7-a40b-b8e407f75cd9" id="md365-signupFormId" autocomplete="off">
+            </div>
+          </div>
+          
+      <span class="md365-h3 hidden" id="success-message">
+        <h3> Sign up was successful. Please confirm your email address. </h3>
+      </span>
+        </form>
+      </div>
+    
+    </section>
+
     <!--====== ABOUT PART ENDS ======-->
 
     
