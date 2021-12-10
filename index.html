@@ -215,48 +215,124 @@
     <section id="newsletter-subscribe" class="about-area pt-20 pb-50">
         <div class="container">
       <!-- Signup form -->
-      <div id="md365-signup">
-        <form class="md365-form" action="https://mailhq-develop.maildesigner365.com/public/api/signup/b8dd12fd-fd71-4b73-b130-7bca0c52670d" method="post" id="md365-subscribe-form" name="subscribe-form" target="_blank">
-          <div id="md365-form">
-            <span class="md365-h3"><h3>Get occasional hints, tips & tricks for macOS</h3></span>
-              <div class="md365-input-wrapper">
-              <input class="md365-input" type="text" name="firstname" id="md365-firstName"
-                placeholder="First name" autocomplete="given-name">
-            </div>
-            <div class="md365-input-wrapper">
-              <input class="md365-input" type="text" name="lastname" id="md365-lastName"
-                placeholder="Last name" autocomplete="family-name">
-            </div>
-            <div class="md365-input-wrapper">
-              <input class="md365-input" type="email" name="email" id="md365-email"
-                placeholder="Email *" autocomplete="email" required>
-                </div>
-          
-                </div>
-                <input class="md365-end" autocomplete="off" type="text" id="nameAlt" name="nameAlt" placeholder="Your name here">
-                <input class="md365-end" autocomplete="off" type="text" id="emailAlt" name="emailAlt" placeholder="Your email here">
-                <br />
-                <div class="row">
+   <!-- Newsletter signup HTML -->
+      <!-- Adjust the size of the signupForm by increasing/decreasing the padding in wd-50 style or wrapping the whole form in a new container-->
+     <div id="md365-signup" class="wd-50">
+       <form class="md365-form" id="md365-subscribe-form">
+         <div id="md365-form">
+            <h3 class="md365-h3">Get occasional hints, tips & tricks for macOS</h3>
+             <div class="md365-input-wrapper">
+             <input class="md365-input" type="text" name="firstname" id="md365-firstName"
+               placeholder="First name" autocomplete="given-name">
+           </div>
+           <div class="md365-input-wrapper">
+             <input class="md365-input" type="text" name="lastname" id="md365-lastName"
+               placeholder="Last name" autocomplete="family-name">
+           </div>
+           <div class="md365-input-wrapper">
+             <input class="md365-input" type="email" name="email" id="md365-email"
+               placeholder="Email *" autocomplete="email" required>
+               </div>
+               
+               <span class="md365-h4"> </span>
+              
+               
             
-            </div>
-            <div class="md365-input-wrapper">
-              <input class="md365-button" type="submit" value="Sign up" name="subscribe"
-            id="md365-subscribe">
-            </div>
-            <div>
-              <input class="md365-redirectURL" style="display: none;" type="text" name="url" value="
-              " id="md365-redirectURL">
-              <input class="md365-confirmationSuccessURL" style="display: none;" type="text" name="confirmation_success_url" value="" id="md365-confirmationSuccessURL">
-              <input class="md365-confirmationFailureURL" style="display: none;" type="text" name="confirmation_failure_url" value="" id="md365-confirmationFailureURL" autocomplete="off">
-              <input class="md365-signupFormId" style="display: none;" type="text" name="signupFormId" value="a309d874-7691-4db7-a40b-b8e407f75cd9" id="md365-signupFormId" autocomplete="off">
-            </div>
-          </div>
-          
-      <span class="md365-h3 hidden" id="success-message">
-        <h3> Sign up was successful. Please confirm your email address. </h3>
-      </span>
-        </form>
-      </div>
+               </div>
+               <input class="md365-end" autocomplete="off" type="text" id="nameAlt" name="nameAlt" placeholder="Your name here">
+               <input class="md365-end" autocomplete="off" type="text" id="emailAlt" name="emailAlt" placeholder="Your email here">
+               <br />
+           <div class="md365-input-wrapper">
+             <input class="md365-button" type="submit" value="Sign up" name="subscribe" id="md365-subscribe">
+           </div>
+           <div>
+             <input class="md365-redirectURL hidden" style="display: none;" type="text" name="url" value="
+             " id="md365-redirectURL">
+             <input class="md365-confirmationSuccessURL" style="display: none;" type="text" name="confirmation_success_url" value="" id="md365-confirmationSuccessURL">
+             <input class="md365-confirmationFailureURL" style="display: none;" type="text" name="confirmation_failure_url" value="" id="md365-confirmationFailureURL" autocomplete="off">
+             <input class="md365-signupFormId" style="display: none;" type="text" name="signupFormId" value="a309d874-7691-4db7-a40b-b8e407f75cd9" id="md365-signupFormId" autocomplete="off">
+           </div>
+         </div>
+         <div><h3 class="md365-h4 hidden"  id="success-message">  </h4></div>
+       </form>
+     </div>
+     <!-- JavaScript -->
+     <script>
+     const formToJSON = elements => {
+       const newAttributes = [];
+     const attributes = document.getElementsByName('attributes');
+     attributes.forEach((attribute) => {
+       if (attribute.checked) {
+         attributeArray = attribute.id.split('-');
+         newAttributes.push([attributeArray[1], attributeArray[2], attributeArray[3]]);
+       };
+               });
+     const dataReduced = [].reduce.call(
+       elements,
+       (data, element) => {
+         if (element.name !== 'attributes' && element.name !== '') {
+         data[element.name] = element.value;
+         }
+         data['attributes'] = {...newAttributes}
+         return data;
+       }, {}
+     );
+     return dataReduced
+   };
+   
+   
+   document.getElementById('md365-subscribe-form').addEventListener(
+     "submit", submitForm);
+    
+     function submitForm(evt) {
+       evt.preventDefault();
+       const form = document.getElementsByClassName('md365-form')[0];
+       const data = formToJSON(form.elements);
+       var request = new XMLHttpRequest();
+      
+       request.open(
+         'POST',
+         'https://mailhq-develop.maildesigner365.com/public/api/signup/b8dd12fd-fd71-4b73-b130-7bca0c52670d'
+       );
+       request.setRequestHeader('Content-Type', 'application/json');
+       request.send(JSON.stringify(data));
+       request.addEventListener('load', function(event) {
+         if (request.status >= 200 && request.status < 300) {
+           var success = document.getElementById('success-message') 
+           if (success !== null) {
+             var response = JSON.parse(request.responseText);
+             success.innerHTML = ` <div><h4 class="md365-h4"  id="success-message"> ${response.result} </h4></div>`
+           document.getElementById("success-message").classList.remove('hidden')
+           } else {
+             var response = JSON.parse(request.responseText);
+             var newEl = document.createElement('p');
+             var el = document.getElementById('failure-message');
+             newEl.innerHTML = ` <div><h4 class="md365-h4"  id="success-message"> ${response.result} </h4></div>`
+             el.parentNode.replaceChild(newEl, el);
+           }
+         } else if(request.status == 400 || request.status == 500 || request.status == 409)  {
+           if (document.getElementById('success-message') !== null) {
+           var el = document.getElementById('success-message');
+           var newEl = document.createElement('p');
+           var response = JSON.parse(request.responseText);
+           newEl.innerHTML =  `  <div><h4 class="md365-h4"  id="failure-message">${response.error} </h4></div>`
+           el.parentNode.replaceChild(newEl, el);
+           } else {
+             var response = JSON.parse(request.responseText);
+             var el = document.getElementById('failure-message');
+             el.innerHTML =   `  <div><h4 class="md365-h4"  id="failure-message">${response.error} </h4></div>`
+           }
+         } else {
+           var response = JSON.parse(request.responseText);
+           alert(response.error);
+         }
+       });
+       request.addEventListener('error', function(event) {
+         var response = JSON.parse(request.responseText);
+         alert(response.error);
+       });
+     };
+   </script>
     
     </section>
 
