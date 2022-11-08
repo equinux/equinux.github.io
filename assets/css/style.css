@@ -29,9 +29,8 @@
 /*===========================
      01.COMMON css 
 ===========================*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,700|Lato:300,400,700&display=swap");
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #6A6972;
@@ -77,7 +76,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   font-weight: 700;
   color: #2E2E2E;
   margin: 0px; }
